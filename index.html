@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zihao Gao | Russian Language & International Trade Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles & Elegant Business Color Palette */
+        :root {
+            --bg-light: #f8f9fa;
+            --bg-card: #ffffff;
+            --primary: #1a365d;  /* Deep Navy Blue */
+            --primary-light: rgba(26, 54, 93, 0.1);
+            --secondary: #8b7355; /* Warm Bronze */
+            --accent: #8b0000;   /* Deep Burgundy */
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gold-accent: #b8860b;
+            --light-gold: rgba(184, 134, 11, 0.1);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            letter-spacing: -0.25px;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-weight: 300;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background-image: linear-gradient(135deg, #f8f9fa 0%, #f1f5f9 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--secondary), var(--gold-accent));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .intro-text h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .intro-text .tagline {
+                font-size: 1.2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .chip {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .portrait-placeholder {
+                width: 180px;
+                height: 270px;
+            }
+
+            .contact-list li {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 1.5rem 0;
+            }
+
+            .social-links a {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Tablet optimizations */
+        @media (max-width: 768px) and (min-width: 481px) {
+            .intro-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .card {
+                padding: 2rem;
+            }
+        }
+
+        .intro-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .intro-text .tagline {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        /* Elegant Cards */
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 4px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            border-bottom: 1px solid var(--light-gold);
+            padding-bottom: 1rem;
+        }
+
+        .card-title i {
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+
+        /* QR Section */
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .qr-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .portrait-placeholder {
+            width: 200px;
+            height: 300px;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .portrait-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-dark);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .contact-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-list i {
+            color: var(--secondary);
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-list a, .contact-list span {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 400;
+        }
+
+        .contact-list a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        /* Skills/Interests Chips */
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .chip {
+            background: var(--light-gold);
+            color: var(--secondary);
+            padding: 0.5rem 1.25rem;
+            border-radius: 2px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(139, 115, 85, 0.2);
+            transition: var(--transition);
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        .chip:hover {
+            background: rgba(139, 115, 85, 0.1);
+            transform: translateY(-2px);
+            border-color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            background: var(--bg-light);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+            background: white;
+            transform: translateY(-3px);
+            border-color: var(--secondary);
+        }
+
+        /* Animations */
+        @keyframes subtle-pulse {
+            0% { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
+            50% { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); }
+            100% { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
+        }
+
+        .pulse {
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">PORTFOLIO</a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="intro-text">
+                    <h1>Hello, I'm <span class="highlight">Zihao Gao</span></h1>
+                    <div class="tagline">Master in Russian Language & Literature | International Trade & Logistics Specialist</div>
+                    <p>
+                        Welcome to my personal portfolio. I'm a passionate professional specializing in
+                        <span class="highlight">International Trade & Logistics</span> with expertise in
+                        <span class="highlight">Russian Language (C1 Level)</span>,
+                        <span class="highlight">Trade Documentation</span>, and
+                        <span class="highlight">Logistics Operations</span>.
+                        I thrive on solving complex problems and creating innovative solutions in cross-cultural business environments.
+                    </p>
+                    <p>
+                        With over <span class="highlight">2</span> years of professional experience, I've worked on diverse projects ranging from
+                        <span class="highlight">Customized Export Solutions for South American Markets</span> to
+                        <span class="highlight">International Block Train Logistics Management</span>.
+                        I'm always eager to learn new languages and collaborate on exciting international challenges.
+                    </p>
+
+                    <div class="chips">
+                        <div class="chip">Russian Language</div>
+                        <div class="chip">International Trade</div>
+                        <div class="chip">Logistics</div>
+                        <div class="chip">Diplomatic Interpreting</div>
+                        <div class="chip">Cross-cultural Communication</div>
+                        <div class="chip">Document Management</div>
+                    </div>
+                </div>
+
+                <div id="contact" class="card qr-section">
+                    <h2 class="card-title"><i class="fas fa-user-tie"></i> Professional Portrait</h2>
+                    <p>Professional portrait for business and networking purposes. Below are my contact details.</p>
+
+                    <div class="qr-container pulse">
+                        <div class="portrait-placeholder">
+                            <!-- Replace with your professional photo -->
+                            <img src="professional-photo.jpg" alt="Zihao Gao - Professional Portrait" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;">
+                        </div>
+                    </div>
+
+                    <p><small>Professional photo for business use. Replace with your portrait image.</small></p>
+
+                    <div class="contact-info">
+                        <h3>Connect With Me</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:gzh98uibe@163.com">gzh98uibe@163.com</a></li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+8615901308531">+86 159-0130-8531</a></li>
+                            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/子豪-高-a19041304" target="_blank">LinkedIn Profile</a></li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span>Xiamen, Fujian Province, China</span></li>
+                            <li><i class="fas fa-language"></i> <span>Chinese (Native), Russian (C1), English (Advanced), Japanese (N2)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="card" style="margin-bottom: 3rem;">
+                <h2 class="card-title"><i class="fas fa-user"></i> About Me</h2>
+                <p>
+                    <strong>Professional Summary:</strong>
+                    I am a highly accomplished Russian language specialist with a Master's degree from University of International Business and Economics (UIBE). With expertise in international trade, logistics operations, and diplomatic interpreting, I have successfully managed complex cross-border transactions and high-level diplomatic engagements. My career goal is to bridge cultural and business gaps between China and Russian-speaking regions through linguistic precision and operational excellence.
+                </p>
+                <p>
+                    <strong>Experience:</strong>
+                    • Trade Document Specialist at Xiamen Xiangyu Co., Ltd. (2024-2025): Developed export solutions for South American markets, achieved 100% first-pass rate for trade documents.<br>
+                    • Operations Specialist at Xiangyu Elian Multi-modal Transport (2023-2024): Managed international block trains and LCL shipments with 100% precision rate.<br>
+                    • Diplomatic Interpreter at 10th China-Central Asia Cooperation Forum (2023): Served as primary interpreter for Tajikistan Vice-Prime Minister.<br>
+                    • Intern at Xiamen Media Group (2020): Produced news content on high-growth enterprises and technological innovations.<br>
+                    • Associate at UIBE Student Union (2017-2018): Organized Beijing University Mock Interview Competition with major corporations.
+                </p>
+                <p>
+                    <strong>Education:</strong>
+                    • MA in Russian Language and Literature, UIBE (2021-2023) - GPA: 3.89/4.0 (TOP 1), Class President<br>
+                    • BA in Russian Language and Literature, UIBE (2017-2021) - GPA: 3.75/4.0 (Top 5%), TRM-4: Excellent<br>
+                    • Exchange Program at Russian State University for the Humanities, Moscow (2019-2020) - CSC Government-funded Scholar<br>
+                    • Test for Russian Majors (TRM-4): Excellent | CET-6: 510 | TOEFL | Pursuing IELTS 7.5
+                </p>
+                <p>
+                    <strong>Passions:</strong>
+                    Beyond professional work, I am a classically trained musician who served as Principal Violist in Xiamen Foreign Language School Symphony Orchestra, performing at Stanford University. I enjoy continuous language learning (currently Japanese at N2 level) and participating in cross-cultural exchange activities that foster international understanding.
+                </p>
+
+                <div class="chips" style="margin-top: 2rem;">
+                    <div class="chip">Academic Excellence</div>
+                    <div class="chip">Diplomatic Protocol</div>
+                    <div class="chip">Multilingual Communication</div>
+                    <div class="chip">Classical Music</div>
+                </div>
+            </section>
+
+            <section id="experience" class="card" style="margin-bottom: 3rem;">
+                <h2 class="card-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Xiamen Xiangyu Co., Ltd. | Overseas Business Department</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.5rem;">Trade Document Specialist | Jul 2024 - Apr 2025</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Developed customized export fulfillment solutions for major clients in South American region</li>
+                        <li>Achieved 100% first-pass rate for full sets of trade documents during market volatility</li>
+                        <li>Accelerated capital recovery for large-scale transactions through rigorous document auditing</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Xiamen Xiangyu Co., Ltd. | Xiangyu Elian Multi-modal Transport</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.5rem;">Operations Specialist | Jul 2023 - Jul 2024</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Managed end-to-end logistics for 4 international block trains and multiple LCL export shipments</li>
+                        <li>Executed business expansion strategies in high-pressure environments with customs clearance anomalies</li>
+                        <li>Maintained 100% precision rate for all operational milestones and closed-loop business cycles</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">10th China-Central Asia Cooperation Forum | Xiamen Foreign Affairs Office</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.5rem;">Diplomatic Interpreter | Sep 2023</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Served as primary interpreter for the Vice-Prime Minister of Tajikistan</li>
+                        <li>Handled high-level bilateral meetings, airport protocols, and diplomatic coordination</li>
+                        <li>Gained firsthand insights into Central Asian diplomatic practices and state-level interactions</li>
+                    </ul>
+                </div>
+
+                <div class="chips" style="margin-top: 1.5rem;">
+                    <div class="chip">International Trade</div>
+                    <div class="chip">Logistics Management</div>
+                    <div class="chip">Diplomatic Protocol</div>
+                    <div class="chip">Risk Control</div>
+                    <div class="chip">Cross-cultural Communication</div>
+                </div>
+            </section>
+
+            <section id="skills" class="card" style="margin-bottom: 3rem;">
+                <h2 class="card-title"><i class="fas fa-code"></i> Professional Skills</h2>
+                <p>
+                    My expertise spans language proficiency, international trade operations, and cross-cultural communication, enabling me to excel in global business environments.
+                </p>
+                <div class="chips">
+                    <div class="chip">Russian Language (C1/TEM-8)</div>
+                    <div class="chip">English (TOEFL)</div>
+                    <div class="chip">Japanese (JLPT N2)</div>
+                    <div class="chip">International Trade</div>
+                    <div class="chip">Logistics Management</div>
+                    <div class="chip">Trade Documentation</div>
+                    <div class="chip">Diplomatic Interpreting</div>
+                    <div class="chip">Academic Translation</div>
+                    <div class="chip">Cross-cultural Communication</div>
+                    <div class="chip">Microsoft Office Suite</div>
+                    <div class="chip">Customs Clearance</div>
+                    <div class="chip">Risk Control</div>
+                </div>
+            </section>
+
+            <section id="gallery" class="card" style="margin-bottom: 3rem;">
+                <h2 class="card-title"><i class="fas fa-images"></i> Life & Interests</h2>
+                <p>Beyond professional endeavors, I enjoy exploring different cultures, classical music, and outdoor activities. Here are some moments from my personal life and travels.</p>
+
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slides">
+                            <div class="carousel-slide active">
+                                <img src="photo1.jpg" alt="UIBE Russian MA graduation 2023">
+                                <div class="slide-caption">UIBE Russian MA Graduation 2023</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="photo2.jpg" alt="Nara Japan trip 2024">
+                                <div class="slide-caption">Nara Japan Trip 2024</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="photo3.jpg" alt="Yokohama Japan trip 2025">
+                                <div class="slide-caption">Yokohama Japan Trip 2025</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="photo4.jpg" alt="Tibet Lhasa road trip 2025">
+                                <div class="slide-caption">Tibet Lhasa Road Trip 2025</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="photo5.jpg" alt="Principal violist in orchestra 2011-2017">
+                                <div class="slide-caption">Principal Violist in Orchestra 2011-2017</div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next slide">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <div class="carousel-indicators">
+                            <button class="indicator active" aria-label="Go to slide 1"></button>
+                            <button class="indicator" aria-label="Go to slide 2"></button>
+                            <button class="indicator" aria-label="Go to slide 3"></button>
+                            <button class="indicator" aria-label="Go to slide 4"></button>
+                            <button class="indicator" aria-label="Go to slide 5"></button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-instructions">
+                        <p><small>Photos automatically rotate every 4 seconds. Use arrows or dots to navigate.</small></p>
+                    </div>
+                </div>
+
+                <style>
+                    /* Carousel Styles */
+                    .carousel-container {
+                        margin: 2rem 0;
+                    }
+
+                    .carousel {
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 4px;
+                        background: var(--bg-light);
+                        border: 1px solid var(--border-color);
+                    }
+
+                    .carousel-slides {
+                        display: flex;
+                        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                        height: 500px;
+                        background: var(--bg-light);
+                    }
+
+                    .carousel-slide {
+                        min-width: 100%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: inherit;
+                    }
+
+                    .carousel-slide img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: contain;
+                        display: block;
+                    }
+
+                    .slide-caption {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: rgba(26, 54, 93, 0.85);
+                        color: white;
+                        padding: 1rem;
+                        text-align: center;
+                        font-family: 'Georgia', 'Times New Roman', serif;
+                        font-size: 1rem;
+                        font-weight: 300;
+                    }
+
+                    .carousel-btn {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: rgba(255, 255, 255, 0.9);
+                        border: 1px solid var(--border-color);
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: var(--transition);
+                        z-index: 10;
+                        color: var(--primary);
+                    }
+
+                    .carousel-btn:hover {
+                        background: white;
+                        border-color: var(--secondary);
+                        transform: translateY(-50%) scale(1.05);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .carousel-btn-prev {
+                        left: 1rem;
+                    }
+
+                    .carousel-btn-next {
+                        right: 1rem;
+                    }
+
+                    .carousel-indicators {
+                        position: absolute;
+                        bottom: 1rem;
+                        left: 0;
+                        right: 0;
+                        display: flex;
+                        justify-content: center;
+                        gap: 0.5rem;
+                        z-index: 10;
+                    }
+
+                    .indicator {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.5);
+                        border: none;
+                        cursor: pointer;
+                        transition: var(--transition);
+                        padding: 0;
+                    }
+
+                    .indicator.active,
+                    .indicator:hover {
+                        background: white;
+                        transform: scale(1.2);
+                    }
+
+                    .carousel-instructions {
+                        text-align: center;
+                        margin-top: 1rem;
+                        color: var(--text-muted);
+                        font-style: italic;
+                    }
+
+                    @media (max-width: 768px) {
+                        .carousel-slides {
+                            height: 350px;
+                        }
+
+                        .carousel-btn {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                </style>
+
+                <script>
+                    // Photo Carousel Script
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const carousel = document.querySelector('.carousel-slides');
+                        const slides = document.querySelectorAll('.carousel-slide');
+                        const prevBtn = document.querySelector('.carousel-btn-prev');
+                        const nextBtn = document.querySelector('.carousel-btn-next');
+                        const indicators = document.querySelectorAll('.indicator');
+                        let currentSlide = 0;
+                        let autoSlideInterval;
+                        let isTransitioning = false;
+                        const slideInterval = 4000; // 4 seconds per slide
+
+                        // Function to update carousel position
+                        function updateCarousel() {
+                            if (isTransitioning) return;
+
+                            isTransitioning = true;
+                            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                            // Update active states
+                            slides.forEach((slide, index) => {
+                                slide.classList.toggle('active', index === currentSlide);
+                            });
+
+                            indicators.forEach((indicator, index) => {
+                                indicator.classList.toggle('active', index === currentSlide);
+                            });
+
+                            // Reset transitioning flag after transition completes
+                            setTimeout(() => {
+                                isTransitioning = false;
+                            }, 500); // Match CSS transition duration
+                        }
+
+                        // Function to go to next slide
+                        function nextSlide() {
+                            if (isTransitioning) return;
+                            currentSlide = (currentSlide + 1) % slides.length;
+                            updateCarousel();
+                        }
+
+                        // Function to go to previous slide
+                        function prevSlide() {
+                            if (isTransitioning) return;
+                            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                            updateCarousel();
+                        }
+
+                        // Function to go to specific slide
+                        function goToSlide(index) {
+                            if (isTransitioning) return;
+                            currentSlide = index;
+                            updateCarousel();
+                        }
+
+                        // Function to start auto sliding
+                        function startAutoSlide() {
+                            stopAutoSlide(); // Clear any existing interval
+                            autoSlideInterval = setInterval(nextSlide, slideInterval);
+                        }
+
+                        // Function to stop auto sliding
+                        function stopAutoSlide() {
+                            if (autoSlideInterval) {
+                                clearInterval(autoSlideInterval);
+                                autoSlideInterval = null;
+                            }
+                        }
+
+                        // Event listeners
+                        prevBtn.addEventListener('click', () => {
+                            prevSlide();
+                            stopAutoSlide();
+                            startAutoSlide();
+                        });
+
+                        nextBtn.addEventListener('click', () => {
+                            nextSlide();
+                            stopAutoSlide();
+                            startAutoSlide();
+                        });
+
+                        indicators.forEach((indicator, index) => {
+                            indicator.addEventListener('click', () => {
+                                goToSlide(index);
+                                stopAutoSlide();
+                                startAutoSlide();
+                            });
+                        });
+
+                        // Pause auto-slide on hover
+                        const carouselContainer = document.querySelector('.carousel');
+                        carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+                        carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+                        // Pause auto-slide on touch devices
+                        carouselContainer.addEventListener('touchstart', stopAutoSlide);
+                        carouselContainer.addEventListener('touchend', () => {
+                            setTimeout(startAutoSlide, 3000); // Restart after 3 seconds
+                        });
+
+                        // Start auto sliding
+                        startAutoSlide();
+
+                        // Update image paths if needed
+                        const images = document.querySelectorAll('.carousel-slide img');
+                        images.forEach((img, index) => {
+                            // You can update image sources here if needed
+                            // img.src = `path/to/your/photo${index + 1}.jpg`;
+                        });
+                    });
+                </script>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Zihao Gao. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> and a touch of elegance</p>
+
+            <div class="social-links">
+                <a href="mailto:gzh98uibe@163.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+8615901308531" target="_blank"><i class="fas fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/子豪-高-a19041304" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.uibe.edu.cn" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple interactive effect for cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('hover');
+            });
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('hover');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
